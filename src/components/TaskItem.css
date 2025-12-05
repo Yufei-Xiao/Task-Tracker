@@ -1,0 +1,112 @@
+/* Container for a single task item */
+.task-item-container {
+    background-color: #ffffff; /* White background for the card */
+    border-radius: 8px; /* Rounded corners */
+    padding: 15px 20px;
+    margin-bottom: 15px; /* Space between tasks */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column;
+    gap: 10px; /* Space between flex items */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.task-item-container:hover {
+    transform: translateY(-2px); /* Slight lift on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Mark completed tasks with a lighter look and strikethrough */
+.task-item-container.completed {
+    opacity: 0.6;
+    background-color: #f7f7f7;
+}
+
+.title {
+    font-size: 1.15rem;
+    font-weight: 600; /* Bolder title */
+    color: #333; /* Darker text */
+}
+
+.task-item-container.completed .title,
+.task-item-container.completed .description {
+    text-decoration: line-through;
+}
+
+.description {
+    font-size: 0.95rem;
+    color: #555;
+    white-space: pre-wrap; /* Respect new lines in description */
+}
+
+/* Container for metadata (time, priority, category) */
+.metadata-row {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    gap: 15px; /* Space between metadata elements */
+    font-size: 0.85rem;
+    color: #777;
+    padding-top: 5px;
+    border-top: 1px solid #eee; /* Separator line */
+}
+
+.priority, .category, .time {
+    /* Style for individual metadata items, e.g., to look like tags */
+    padding: 3px 8px;
+    border-radius: 4px;
+    background-color: #f0f0f0;
+    display: inline-flex; /* Use inline-flex to contain content */
+    align-items: center;
+}
+
+/* Ensure the emoji and text are in one line and properly aligned */
+.priority p, .category p {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+/* Action button container */
+.actions-row {
+    display: flex;
+    justify-content: flex-end; /* Push buttons to the right */
+    gap: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+}
+
+/* Universal button styling */
+.actions-row button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: background-color 0.2s ease;
+    font-weight: 500;
+}
+
+/* Specific button styles */
+.changecompletion {
+    background-color: #e0f7fa; /* Light cyan */
+    color: #00838f; /* Darker cyan */
+}
+.changecompletion:hover {
+    background-color: #b2ebf2;
+}
+
+.edit {
+    background-color: #fffde7; /* Light yellow */
+    color: #f9a825; /* Darker yellow/orange */
+}
+.edit:hover {
+    background-color: #fff9c4;
+}
+
+.delete {
+    background-color: #ffebee; /* Light red */
+    color: #d32f2f; /* Darker red */
+}
+.delete:hover {
+    background-color: #ffcdd2;
+}

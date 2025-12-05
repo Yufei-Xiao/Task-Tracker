@@ -1,0 +1,192 @@
+/* --- HEADER AND LAYOUT STYLES --- */
+
+.main-content {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px; /* Add horizontal padding for smaller screens */
+}
+
+/* Container for user info and logout button */
+.app-header {
+    display: flex;
+    justify-content: space-between; /* Puts username on left, logout on right */
+    align-items: center;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #ddd;
+}
+
+.username {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.logout {
+    padding: 8px 15px;
+    background-color: #e74c3c; /* Red for emphasis */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.logout:hover {
+    background-color: #c0392b;
+}
+
+h1 {
+    font-size: 1.8rem;
+    color: #3498db; /* Primary blue for title */
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* --- CONTROL BUTTONS (ADD TASK & SORT) --- */
+
+.control-bar {
+    display: flex;
+    flex-wrap: wrap; /* Allows buttons to wrap on small screens */
+    gap: 10px;
+    margin-bottom: 25px;
+    align-items: center;
+}
+
+/* Style for the main 'Add Task' button */
+.addtask {
+    padding: 10px 18px;
+    background-color: #2ecc71; /* Green color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    flex-shrink: 0; /* Keep its size fixed */
+}
+
+.addtask:hover {
+    background-color: #27ae60;
+}
+
+/* Styles for the Sort buttons (Base Style) */
+/* The original rule is replaced/expanded by the .sort-button class below for consistency */
+/* .control-bar button:not(.addtask) { ... } */
+
+
+/* * NEW/UPDATED SORT BUTTON STYLING 
+ * Using .sort-button class for all sort controls for consistency.
+ */
+
+.control-bar .sort-button {
+    padding: 8px 15px;
+    background-color: #ecf0f1; /* Light gray (Default state) */
+    color: #34495e;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.2s, box-shadow 0.2s, color 0.2s;
+    font-weight: 500;
+}
+
+.control-bar .sort-button:hover {
+    background-color: #d8dbe0; /* Slightly darker gray on hover */
+}
+
+/* Active/Selected State Styling */
+.control-bar .sort-button.active {
+    background-color: #3498db; /* Primary blue for selected state */
+    color: white; /* White text on selected state */
+    border-color: #3498db;
+    font-weight: 600;
+    box-shadow: 0 2px 5px rgba(52, 152, 219, 0.3); /* Subtle blue shadow */
+}
+
+/* --- EDIT MODAL STYLES --- */
+
+/* Full screen overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* The modal card itself */
+.modal {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 450px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal h3 {
+    margin-top: 0;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.modal-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.modal-field label {
+    font-weight: 500;
+    margin-bottom: 5px;
+    text-transform: capitalize; /* Make 'priority', 'date' look nicer */
+}
+
+.modal-field input,
+.modal-field select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.modal-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.modal-buttons button:first-child { /* Save button */
+    background-color: #3498db;
+    color: white;
+}
+
+.modal-buttons button:first-child:hover {
+    background-color: #2980b9;
+}
+
+.modal-buttons button:last-child { /* Cancel button */
+    background-color: #ecf0f1;
+    color: #34495e;
+}
+
+.modal-buttons button:last-child:hover {
+    background-color: #bdc3c7;
+}

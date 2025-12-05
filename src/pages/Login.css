@@ -1,0 +1,92 @@
+/* --- Container and Centering --- */
+
+.login-container {
+    max-width: 400px; /* Set a clean, fixed width for the form */
+    margin: 80px auto; /* Center the container vertically and horizontally */
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Clear, modern shadow */
+    text-align: center; /* Center the heading and link */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* --- Heading Style --- */
+
+.login-container h1 {
+    font-size: 2rem;
+    color: #2c3e50; /* Dark heading color */
+    margin-bottom: 25px;
+}
+
+/* --- Form Elements --- */
+
+.login-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between inputs */
+}
+
+/* Input Fields */
+.login-container input[type="email"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box; /* Ensures padding doesn't widen the input */
+    transition: border-color 0.3s;
+}
+
+.login-container input:focus {
+    border-color: #3498db; /* Primary blue focus color */
+    outline: none;
+}
+
+/* Submit Button */
+.login-container button[type="submit"] {
+    padding: 12px;
+    background-color: #3498db; /* Primary blue color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 10px; /* Space above the button */
+}
+
+.login-container button[type="submit"]:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+}
+
+/* --- Helper/Error Text --- */
+
+.login-container p {
+    margin-top: 20px;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+/* Link Style */
+.login-container a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.login-container a:hover {
+    text-decoration: underline;
+}
+
+/* Error Message Style */
+.login-container p[style*="color: red"] {
+    margin-top: 10px;
+    font-weight: 500;
+    padding: 8px;
+    background-color: #fce4e4; /* Light red background for error */
+    border: 1px solid #d32f2f;
+    border-radius: 4px;
+}

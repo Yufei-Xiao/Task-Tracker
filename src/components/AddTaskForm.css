@@ -1,0 +1,101 @@
+.add-task-form {
+    background-color: #e8f8f8; /* Very light, subtle background */
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    flex: 1 1 45%; /* Allows two groups per row on wider screens */
+    min-width: 250px; /* Minimum width for stacking on small screens */
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #2c3e50;
+    font-size: 0.9rem;
+}
+
+input[type="text"],
+input[type="date"],
+textarea,
+select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+    background-color: #ffffff;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #3498db; /* Blue focus outline */
+    outline: none;
+}
+
+textarea {
+    resize: vertical; /* Only allow vertical resizing */
+    min-height: 80px;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #3498db; /* Primary blue color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.submit-button:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+}
+/* ... (Keep the previous styles for add-task-form, form-row, form-group, etc.) */
+
+/* Grouping for action buttons */
+.form-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+/* Make the submit button prominent (already styled as .submit-button) */
+.submit-button {
+    flex-grow: 1; /* Allow it to take up available space */
+    /* ... (Keep existing styles for submit-button) ... */
+}
+
+/* Style for the cancel button */
+.cancel-button {
+    padding: 12px;
+    background-color: #ecf0f1; /* Light gray */
+    color: #34495e; /* Darker text */
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    flex-grow: 1;
+}
+
+.cancel-button:hover {
+    background-color: #bdc3c7;
+}

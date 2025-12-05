@@ -1,0 +1,29 @@
+.searchbar {
+    margin-bottom: 25px; /* Space below the search bar */
+    display: flex; /* For potential future additions like a search icon */
+    width: 100%;
+}
+
+.searchbar input[type="text"] {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 1rem;
+    border: 2px solid #bdc3c7; /* Subtle border */
+    border-radius: 6px;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: #ffffff; /* White background */
+}
+
+/* Focused state for better accessibility and visual feedback */
+.searchbar input[type="text"]:focus {
+    border-color: #3498db; /* Primary blue focus color */
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.4); /* Subtle glow */
+    outline: none; /* Remove default browser outline */
+}
+
+/* Optional: Placeholder styling */
+.searchbar input::placeholder {
+    color: #95a5a6;
+    font-style: italic;
+}
